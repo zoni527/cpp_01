@@ -1,0 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jvarila <jvarila@student.hive.fi>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/29 09:31:25 by jvarila           #+#    #+#             */
+/*   Updated: 2025/05/29 10:00:07 by jvarila          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "HumanA.hpp"
+#include <iostream>
+
+// ------------------------------------------------------------ member functions
+
+void HumanA:: attack( void ) {
+	std::cout	<< _name << " attacks with their "
+				<< _weapon.getType() << std::endl;
+}
+
+// ----------------------------------------------------------------- constructor
+
+HumanA:: HumanA( std::string const &str, Weapon const &weapon) :
+	_name(str), _weapon(weapon) {
+	std::cout << _name << " has entered the battlefield" << std::endl;
+}
+
+// ------------------------------------------------------------------ destructor
+
+HumanA::~HumanA( void ) {
+	std::cout << _name << " has left the battlefield" << std::endl;
+}
