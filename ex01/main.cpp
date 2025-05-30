@@ -11,10 +11,7 @@
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-#include <cstdlib>
-#include <ctime>
 #include <iostream>
-#include <string>
 
 static std::string const random_names[] = {
 	"Mark",

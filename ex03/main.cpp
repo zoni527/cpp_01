@@ -13,8 +13,6 @@
 #include "Weapon.hpp"
 #include "HumanA.hpp"
 #include "HumanB.hpp"
-#include <cstdlib>
-#include <ctime>
 #include <iostream>
 
 static std::string const random_names[] = {
