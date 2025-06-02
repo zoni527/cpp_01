@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SedIsForLosers.hpp                                 :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvarila <jvarila@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/29 14:32:05 by jvarila           #+#    #+#             */
-/*   Updated: 2025/05/29 14:37:32 by jvarila          ###   ########.fr       */
+/*   Created: 2025/05/30 15:11:22 by jvarila           #+#    #+#             */
+/*   Updated: 2025/05/30 15:14:30 by jvarila          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,14 @@
 
 #include <string>
 
-class SedIsForLosers {
+class Harl {
 
 public:
-	int	run();
-
-	SedIsForLosers(	std::string const &file,
-					std::string const &s1,
-					std::string const &s2);
+	void	complain( std::string level );
 
 private:
-	std::string const	_file;
-	std::string const	_s1;
-	std::string const	_s2;
+	void	debug( void );
+	void	info( void );
+	void	warning( void );
+	void	error( void );
 };

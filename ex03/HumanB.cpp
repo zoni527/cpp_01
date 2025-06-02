@@ -18,7 +18,7 @@
 void HumanB:: attack( void ) {
 
 	std::cout	<< _name << " attacks with their ";
-	if (_weapon)
+	if (!_weapon)
 		std::cout << "bare hands";
 	else
 		std::cout << _weapon->getType();
@@ -27,7 +27,7 @@ void HumanB:: attack( void ) {
 
 void HumanB:: setWeapon( Weapon const &weapon ) {
 	this->_weapon = &weapon;
-	std::cout << this->_name << " has equipped" << _weapon << std::endl;
+	std::cout << _name << " has equipped" << _weapon->getType() << std::endl;
 }
 
 // ----------------------------------------------------------------- constructor

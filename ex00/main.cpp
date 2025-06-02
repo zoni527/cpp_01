@@ -48,10 +48,13 @@ int main( void ) {
 	// When there is a heap zombie it is important to free the pointer before we
 	// reach the end of its scope.
 	print_test_name("Heap zombie test");
-	{
+	try {
 		Zombie *heap_zombie = newZombie(random_name());
 		heap_zombie->announce();
 		delete heap_zombie;
+	}
+	catch (std::bad_alloc&) {
+		std::cerr << "ERROR: failed to allocate memory" << std::endl;
 	}
 	// The random zombie created when calling randomChump only exists within the
 	// function's scope, so it gets deleted after the function completes.

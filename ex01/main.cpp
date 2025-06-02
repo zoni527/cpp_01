@@ -51,10 +51,15 @@ int main( int argc, char *argv[] ) {
 	}
 	print_test_name("Zombie horde test");
 	std::string name = random_name();
-	Zombie *horde = zombieHorde(n, name);
-	for (size_t i = 0; i < n; ++i)
-		horde[i].announce();
-	delete[] horde;
+	try {
+		Zombie *horde = zombieHorde(n, name);
+		for (size_t i = 0; i < n; ++i)
+			horde[i].announce();
+		delete[] horde;
+	}
+	catch (std::bad_alloc&) {
+		std::cerr << "ERROR: bad allocation" << std::endl;
+	}
 	return 0;
 }
 
