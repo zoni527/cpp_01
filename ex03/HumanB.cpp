@@ -27,7 +27,7 @@ void HumanB:: attack( void ) {
 
 void HumanB:: setWeapon( Weapon const &weapon ) {
 	this->_weapon = &weapon;
-	std::cout << _name << " has equipped" << _weapon->getType() << std::endl;
+	std::cout << _name << " has equipped " << _weapon->getType() << std::endl;
 }
 
 // ----------------------------------------------------------------- constructor
